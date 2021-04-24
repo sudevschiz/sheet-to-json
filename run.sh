@@ -41,3 +41,5 @@ else
 fi
 
 echo "finish"
+
+git checkout "$main_branch"
