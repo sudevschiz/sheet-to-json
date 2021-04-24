@@ -33,11 +33,11 @@ jobs:
 
       - name: push
         run: |
-          bash ./main.sh 2>> /tmp/apidata_err
+          bash ./run.sh 2>> /tmp/apidata_err
           echo "the job completed"
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
-          OXYGEN_REQUIREMENT: ${{ secrets.SHEET_OXYGEN_REQUIREMENT }}
+          SHEET: ${{ secrets.SHEET }}
       - name: show job status
         if: always()
         run: |
